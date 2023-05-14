@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Games{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    {% for game in games %}
+    <div>
+        <a href="{{ url_for('game_page', game_id=game.id, name=game.name | replace(' ', '_')) }}"><img src="{{ game.image }}" height="325px" width="100%"></a>
+        {{ game.name }}
+        <br>
+        ${{ game.price }}
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
