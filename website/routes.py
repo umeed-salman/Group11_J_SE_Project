@@ -30,11 +30,13 @@ def Admin():
 
 @app.route('/')
 @app.route('/home/')
+
 def home_page():
     return render_template('home.html')
 
 
 @app.route('/register/', methods=['GET', 'POST'])
+
 def register_page():
     form = RegisterForm()
     if form.validate_on_submit():
@@ -53,6 +55,7 @@ def register_page():
 
 
 @app.route('/login/', methods=['GET', 'POST'])
+
 def login_page():
     form = LoginForm()
     if form.validate_on_submit():
@@ -67,11 +70,13 @@ def login_page():
     return render_template('login.html', form=form)
 
 
+
 @app.route('/logout/')
 def logout_page():
     logout_user()
     flash('Successfully logged out', category='info')
     return redirect(url_for('home_page'))
+
 
 
 @app.route('/admin/')
@@ -257,4 +262,3 @@ def support_page():
         response = answer
 
     return render_template('support.html', form=form, response=response)
-
