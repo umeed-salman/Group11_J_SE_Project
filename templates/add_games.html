@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block title %}Add a Game{% endblock %}
+
+{% block content %}
+
+<div align="center">
+    <br>
+    <div>
+        <h1>Add A Game</h1>
+    </div>
+    <br>
+    <div>
+        <form method="POST" class="form-register" style="color:white">
+            {{ form.hidden_tag() }}
+            <table cellpadding="5">
+                <tr>
+                    <td>
+                        {{ form.name.label() }}
+                    </td>
+                    <td>
+                        {{ form.name(placeholder='Game Name') }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ form.price.label() }}
+                    </td>
+                    <td>
+                        {{ form.price(placeholder='0 - 150') }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ form.description.label() }}
+                    </td>
+                    <td>
+                        {{ form.description(placeholder="Game Description") }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ form.image.label() }}
+                    </td>
+                    <td>
+                        {{ form.image(placeholder="URL") }}
+                    </td>
+                </tr>
+            </table>
+            <br>
+            {{ form.submit(class="btn btn-lg btn-primary") }}
+        </form>
+    </div>
+</div>
+{% endblock %}

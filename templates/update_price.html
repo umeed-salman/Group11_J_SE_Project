@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}Update Price{% endblock %}
+
+{% block content %}
+
+<div align="center">
+    <br>
+    <div>
+        <h1>Update Price</h1>
+    </div>
+    <br>
+    <div>
+        <form method="POST" class="form-register" style="color:white">
+            {{ form.hidden_tag() }}
+            <table cellpadding="5">
+                <tr>
+                    <td>
+                        {{ form.id.label() }}
+                    </td>
+                    <td>
+                        {{ form.id(placeholder='Game ID') }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ form.new_price.label() }}
+                    </td>
+                    <td>
+                        {{ form.new_price(placeholder='0 - 150') }}
+                    </td>
+                </tr>
+            </table>
+            <br>
+            {{ form.submit(class="btn btn-lg btn-primary") }}
+        </form>
+    </div>
+</div>
+{% endblock %}

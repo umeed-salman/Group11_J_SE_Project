@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %}Add Key{% endblock %}
+
+{% block content %}
+
+<div align="center">
+    <br>
+    <div>
+        <h1>Add Key</h1>
+    </div>
+    <br>
+    <div>
+        <form method="POST" class="form-register" style="color:white">
+            {{ form.hidden_tag() }}
+            <table cellpadding="5">
+                <tr>
+                    <td>
+                        {{ form.id.label() }}
+                    </td>
+                    <td>
+                        {{ form.id(placeholder='Game ID') }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ form.value.label() }}
+                    </td>
+                    <td>
+                        {{ form.value(placeholder='Game Key') }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ form.platform.label() }}
+                    </td>
+                    <td>
+                        {{ form.platform() }}
+                    </td>
+                </tr>
+            </table>
+            <br>
+            {{ form.submit(class="btn btn-lg btn-primary") }}
+        </form>
+    </div>
+</div>
+{% endblock %}
