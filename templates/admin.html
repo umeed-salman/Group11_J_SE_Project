@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block content %}
+
+<div align="center">
+    <br>
+    <div>
+        <h1>Admin Dashboard</h1>
+    </div>
+    <br>
+    <div>
+        <table cellpadding="20">
+            <tr>
+                <td>
+                    <a class="btn btn-lg btn-primary btn-block" href="{{ url_for('add_games_page') }}">
+                        Add Games
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-lg btn-primary btn-block" href="{{ url_for('delist_games_page') }}">
+                        Delist Games
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a class="btn btn-lg btn-primary btn-block" href="{{ url_for('add_key_page') }}">
+                        Add Keys
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-lg btn-primary btn-block" href="{{ url_for('update_price_page') }}">
+                        Update Price
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+{% endblock %}

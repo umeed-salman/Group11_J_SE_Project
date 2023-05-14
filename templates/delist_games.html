@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}Delist Game{% endblock %}
+
+{% block content %}
+
+<div align="center">
+    <br>
+    <div>
+        <h1>Delist Game</h1>
+    </div>
+    <br>
+    <div>
+        <form method="POST" class="form-register" style="color:white">
+            {{ form.hidden_tag() }}
+            <table cellpadding="5">
+                <tr>
+                    <td>
+                        {{ form.id.label() }}
+                    </td>
+                    <td>
+                        {{ form.id(placeholder='Game ID') }}
+                    </td>
+                </tr>
+            </table>
+            <br>
+            {{ form.submit(class="btn btn-lg btn-primary") }}
+        </form>
+    </div>
+</div>
+{% endblock %}
