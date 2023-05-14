@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
-{% block title %}Login{% endblock %}
+{% block title %}Update Price{% endblock %}
 
 {% block content %}
 
 <div align="center">
     <br>
     <div>
-        <h1>Login</h1>
+        <h1>Update Price</h1>
     </div>
     <br>
     <div>
@@ -15,18 +15,18 @@
             <table cellpadding="5">
                 <tr>
                     <td>
-                        {{ form.email.label() }}
+                        {{ form.id.label() }}
                     </td>
                     <td>
-                        {{ form.email(placeholder="Email Address") }}
+                        {{ form.id(placeholder='Game ID') }}
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        {{ form.password.label() }}
+                        {{ form.new_price.label() }}
                     </td>
                     <td>
-                        {{ form.password(placeholder="Password") }}
+                        {{ form.new_price(placeholder='0 - 150') }}
                     </td>
                 </tr>
             </table>
@@ -35,5 +35,4 @@
         </form>
     </div>
 </div>
-
 {% endblock %}
